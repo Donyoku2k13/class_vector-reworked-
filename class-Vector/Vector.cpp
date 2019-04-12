@@ -124,6 +124,22 @@ int vector_::getElement(int pos)
 	}
 	return arr[pos];
 }
+vector_ vector_::operator=(const vector_ & obj)
+{
+	if (this==&obj)
+	{return *this;}
+	this->clear();
+	if (obj.arr!=nullptr)
+	{
+		this->arr = new int[size];
+		for (size_t i = 0; i < size; i++)
+		{
+			this->arr[i] = obj.arr[i];
+		}
+		
+	}
+	return *this;
+}
 
 vector_::~vector_()
 {
