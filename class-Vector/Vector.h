@@ -17,6 +17,7 @@ public:
 	int getSize();
 	bool empty();
 	int getElement(int pos);
+	vector_ operator=(const vector_& obj);
 	~vector_();
 	
 
